@@ -261,7 +261,7 @@ getData() {
         done
         DOMAIN=${DOMAIN,,}
         colorEcho ${BLUE}  " 伪装域名(host)：$DOMAIN"
-        domain_ip=$(ping "${domain}" -c 1 | sed '1{s/[^(]*(//;s/).*//;q}')
+        domain_ip=$(ping "${DOMAIN}" -c 1 | sed '1{s/[^(]*(//;s/).*//;q}')
         echo -e "${OK} ${GreenBG} 正在获取 公网ip 信息，请耐心等待 ${Font}"
         local_ip=$(curl https://api-ipv4.ip.sb/ip)
         echo -e "域名dns解析IP：${domain_ip}"
