@@ -285,7 +285,6 @@ getData() {
             *)
                 echo -e "${RedBG} 安装终止 ${Font}"
                 exit 1
-            fi
         fi
     fi
 
