@@ -824,7 +824,9 @@ installV2ray() {
     mkdir -p '/etc/v2ray' '/var/log/v2ray' && \
     unzip /tmp/v2ray/v2ray.zip -d /tmp/v2ray
     mkdir -p /usr/bin/v2ray
-    cp /tmp/v2ray/v2ray /usr/bin/v2ray/; cp /tmp/v2ray/geo* /usr/bin/v2ray/; cp /tmp/v2ray/systemd/system/v2ray.service /usr/bin/v2ray/systemd/system/v2ray.service; cp /tmp/v2ray/systemd/system/v2ray@.service /usr/bin/v2ray/systemd/system/v2ray@.service
+    mkdir -p /usr/bin/v2ray/systemd
+    mkdir -p /usr/bin/v2ray/systemd/system
+    cp /tmp/v2ray/v2ray /usr/bin/v2ray/; cp /tmp/v2ray/geo* /usr/bin/v2ray/; cp /tmp/v2ray/systemd/system/v2ray.service /usr/bin/v2ray/systemd/system/; cp /tmp/v2ray/systemd/system/v2ray@.service /usr/bin/v2ray/systemd/system/;
     chmod +x '/usr/bin/v2ray/v2ray' || {
         colorEcho $RED " V2ray安装失败"
         exit 1
