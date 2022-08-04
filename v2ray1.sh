@@ -814,7 +814,7 @@ installBBR() {
 installV2ray() {
     rm -rf /tmp/v2ray
     mkdir -p /tmp/v2ray
-    DOWNLOAD_LINK="${V6_PROXY}https://github.com/v2fly/v2ray-core/releases/download/v5.0.7/v2ray-linux-64.zip"
+    DOWNLOAD_LINK="${V6_PROXY}"https://github.com/v2fly/v2ray-core/releases/download/${NEW_VER}/v2ray-linux-$(archAffix).zip
     colorEcho $BLUE " 下载V2Ray: ${DOWNLOAD_LINK}"
     curl -L -H "Cache-Control: no-cache" -o /tmp/v2ray/v2ray.zip ${DOWNLOAD_LINK}
     if [ $? != 0 ];then
